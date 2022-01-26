@@ -1,24 +1,25 @@
+import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const HelloWorld());
+  runApp(const RandomLetters());
 }
 
-class HelloWorld extends StatelessWidget {
-  const HelloWorld({Key? key}) : super(key: key);
+class RandomLetters extends StatelessWidget {
+  const RandomLetters({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final wordPair = WordPair.random(); // Add this line.
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.purple[400],
-          foregroundColor: Colors.purple[50],
           title: const Text('Welcome to Flutter'),
         ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Center(                          // Drop the const, and
+          //child: Text('Hello World'),        // Replace this text...
+          child: Text(wordPair.asPascalCase),  // With this text.
         ),
       ),
     );
