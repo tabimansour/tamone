@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const IncrementCounter());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class IncrementCounter extends StatelessWidget {
+  const IncrementCounter({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
